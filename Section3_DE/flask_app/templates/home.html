@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <center>
+
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+            <a class="navbar-brand" href="/">Used Car Price Calculator</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/dashboard">Dashboard</a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+          
+    <div class="jumbotron">
+        <br></br>
+        <br></br>
+        <h1 class="display-4">중고차 가격 계산기</h1>
+        <br></br>
+        <img src="static/hatchback.png" alt="Car Image" width="300">
+        <br></br>
+        <p class="lead">당신의 중고차 가격은 얼마일까요?</p>
+        <a class="btn btn-primary btn-lg" href="/car-info" role="button">내 차 가격 알아보기</a>
+      </div>
+    </center>
+    
+
+{% endblock %}
+  
+
+
+    
+

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{% if data %}
+    <center>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="/">Used Car Price Calculator</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/dashboard">Dashboard</a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+
+        
+        <br></br>
+        <br></br>
+    <h1>Result</h1><br/><br/>
+    <img src="static/car.png" alt="Car Image" width="300">
+    <br></br>
+    <br></br>
+    <h3>예상 차량가격은 {{data}} 만원 입니다. </h3>
+    </center>
+{% endif %}
+{% endblock %}

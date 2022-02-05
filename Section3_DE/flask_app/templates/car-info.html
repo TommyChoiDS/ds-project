@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <center>
+    
+    <form method="POST", action="{{url_for('modeling')}}">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="/">Used Car Price Calculator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard">Dashboard</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <br></br>
+      <br></br>
+      <h1>차량 정보를 입력해주세요.</h1>
+      <br></br>
+
+        <b> 
+            
+            제조사 : <select name="Manufacturer" >
+                    <option value="none">=== 선택 ===</option>
+                    <option value="쉐보레(GM대우)">쉐보레(GM대우)</option>
+                    <option value="기아">기아</option>
+                    <option value="르노삼성">르노삼성</option>
+                    <option value="현대">현대</option>
+                    <option value="기타 제조사">기타 제조사</option>
+                  </select>
+            
+            <br/><br/>
+            
+            차종 : <select name="Model" >
+                    <option value="none">=== 선택 ===</option>
+                    <option value="더 넥스트 스파크">더 넥스트 스파크</option>
+                    <option value="더 뉴 스파크">더 뉴 스파크</option>
+                    <option value="스파크">스파크</option>
+                    <option value="마티즈 크리에이티브">마티즈 크리에이티브</option>
+                    <option value="All New 마티즈">All New 마티즈</option>
+                    <option value="마티즈 클래식">마티즈 클래식</option>
+                    <option value="더 뉴 모닝">더 뉴 모닝</option>
+                    <option value="올 뉴 모닝">올 뉴 모닝</option>
+                    <option value="올 뉴 모닝 (JA)">올 뉴 모닝 (JA)</option>
+                    <option value="뉴모닝">뉴모닝</option>
+                    <option value="모닝 어반">모닝 어반</option>
+                    <option value="모닝">모닝</option>
+                    <option value="더 뉴 레이">더 뉴 레이</option>
+                    <option value="레이">레이</option>
+                    <option value="트위지">트위지</option>
+                    <option value="티코">티코</option>
+                    <option value="아토스">아토스</option>
+                    <option value="기타">기타</option>
+                  </select>
+                <br/><br/>
+            주행거리 : <input type="number", name='Km', placeholder="주행거리를 입력해주세요"> <br/><br/>
+
+            
+            연료 : <select name="Fuel">
+                    <option value="none">=== 선택 ===</option>
+                    <option value="가솔린">가솔린</option>
+                    <option value="LPG(일반인 구입)">LPG(일반인 구입)</option>
+                    <option value="가솔린+LPG">가솔린+LPG</option>
+                    <option value="전기">전기</option>
+                    <option value="가솔린+전기">가솔린+전기</option>
+                  </select>
+            <br/><br/>
+
+            
+            지역 : <select name="Loc">
+                    <option value="none">=== 선택 ===</option>
+                    <option value="서울">서울</option>
+                    <option value="인천">인천</option>
+                    <option value="경기">경기</option>
+                    <option value="강원">강원</option>
+                    <option value="대전">대전</option>
+                    <option value="충북">충북</option>
+                    <option value="충남">충남</option>
+                    <option value="대구">대구</option>
+                    <option value="경북">경북</option>
+                    <option value="부산">부산</option>
+                    <option value="울산">울산</option>
+                    <option value="경남">경남</option>
+                    <option value="광주">광주</option>
+                    <option value="전북">전북</option>
+                    <option value="전남">전남</option>
+                    <option value="제주">제주</option>
+                  </select>
+            <br/><br/>            
+        최초 등록연도 : <input type="number", name='Old_year', placeholder="최초 등록연도를 입력해주세요.",min="1900"> <br/><br/>
+        
+        최초 등록월 : <select name="Old_month">
+                    <option value="none">=== 선택 ===</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+        <br/><br/>
+    <input class="btn btn-primary btn-lg" type="submit", value="입력완료"></b>
+    <br></br>
+    </form>
+    </center>
+    
+{% endblock %}
+
