@@ -1,17 +1,18 @@
-# 재활용 폐기물 영상인식 프로젝트
+# Ames 주택데이터를 이용한 집값예측 Machine Learning 프로젝트
 
-2021.11.08 - 2021.11.12
+2021.08.31 - 2021.09.07
 
-컴퓨터비전과 딥러닝을 이용한 재활용 폐기물 객체인식 프로젝트
+Random Forest와 Boosting 모델을 이용한 회귀 모델링
 
-사용 기술 : OpenCV, YOLO v4
+사용 기술 : Pandas, Pandas Profiling, Random Forest, XGBoost, LGBM, CatBoost, eli5
 
 ---
 
-- 컨베이어 벨트위를 지나는 재활용 폐기물의 종류, 색상, 위치를 인식하는 프로그램 개발
-- YOLO v3에 비해 이미지 처리속도가 빠르고, 정확도도 우수한  YOLO v4모델 선정
-- Labeling Tool을 이용하여 862장의 이미지 데이터 가공
-- 이미지의 채도, 명도, 색상에 대해 Data Augmentation 옵션을 지정한 후 5000번 학습
-- 학습 결과 그래프에서 loss값이 0으로 잘 수렴하고 있고, mAP도 90%~92% 수준으로, 안정적으로 학습이 진행됨
-- OpenCV와 연동하여 확인한 결과, 사람이 가공한 데이터와 큰 차이가 없을정도로 객체를 잘 인식
-- OpenCV가 GPU를 이용하여 연산하도록 설정하여 다시 빌드하면 연산 성능을 약 3배가량 향상시킬 수 있음
+- Ames 주택데이터를 이용하여 집값을 예측하는 Machine Learning 프로젝트
+- 모델 성능을 올리기 위한 피처 엔지니어링
+- Ames의 집값을 예측하기 위한 모델링
+    - Random Forest를 이용하여 베이스라인 모델링
+        - Random Forest RMSLE : 0.1481
+    - XGBoost, LGBM, CatBoost를 이용하여 예측 성능 향상
+        - CatBoost RMSLE : 0.1284
+- 각 변수의 중요도를 평가하기 위해 Permutation Importance라는 XAI기법을 사용
