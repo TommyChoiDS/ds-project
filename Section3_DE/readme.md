@@ -1,5 +1,7 @@
 # 중고차 가격 예측 웹서비스 구축 프로젝트
 
+21.10.06 - 21.10.13
+
 차량 정보 기반 중고차 가격 예측 웹서비스 구축 프로젝트
 
 사용 기술 : Pandas, BeautifulSoup, Selenium, CatBoost, Flask, PostgreSQL
