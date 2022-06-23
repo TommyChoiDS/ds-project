@@ -1,1 +1,1 @@
-# ds-section1-project
+# CodeStates Section Project
