@@ -4,7 +4,7 @@
 
 Python을 이용하여 탐색적 데이터분석을 진행하고, 인사이트를 도출
 
-사용 기술 : Pandas, Matplotlib, Plotly
+사용 기술 : Pandas, Plotly
 
 
 ---
