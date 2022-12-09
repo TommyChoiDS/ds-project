@@ -1,0 +1,5 @@
+data
+spark-warehouse
+.ipynb_checkpoints
+trips
+config.json

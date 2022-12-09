@@ -1,5 +1,4 @@
-import re
-import requests
+import json
 from bs4 import BeautifulSoup
 import numpy as np
 import time
@@ -74,11 +73,18 @@ df = Transformation(df)
 
 # --------Load--------
 
+# RDS client_id, client_secret 정보 불러오기
+with open('./config.json') as f:
+    config = json.load(f)
 
-host = 'arjuna.db.elephantsql.com'
-user = 'qrnyldng'
-password = 'TmCangCbHK1oWFRacELzYlFIDB3pWBYe'
-database = 'qrnyldng'
+client_id = config['client_id']
+client_secret = config['client_secret']
+
+host = config['host']
+user = config['port']
+database = config['database']
+password = config['password']
+
 
 connection = psycopg2.connect(
     host=host,
